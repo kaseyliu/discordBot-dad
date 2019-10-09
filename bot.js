@@ -13,7 +13,7 @@ client.on('message', msg => {
 
     if(prefix === "i'm" || prefix === "i’m" || prefix === "im"){
         var name = msg.content.slice(prefix.length + 1)
-        msg.channel.send(`Hi ${name}, I'm dad.`)
+        msg.channel.send(`Hi ${name}, I'm Dad.`)
     }
 
 });
