@@ -9,9 +9,10 @@ client.once('ready', () => {
 })
 
 client.on('message', msg => {
+    var prefix = msg.content.split(' ', 2)[0] = prefix.toLowerCase()
 
-    if(msg.content.split(' ', 2)[0].toLowerCase() === "i'm" || msg.content.split(' ', 2)[0].toLowerCase() === "i’m" || msg.content.split(' ', 2)[0].toLowerCase() === "im"){
-        var name = msg.content.slice(4)
+    if(prefix === "i'm" || prefix === "i’m" || prefix === "im"){
+        var name = msg.content.slice(prefix.length + 1)
         msg.channel.send(`Hi ${name}, I'm dad.`)
     }
 
