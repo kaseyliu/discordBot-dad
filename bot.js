@@ -10,7 +10,7 @@ client.once('ready', () => {
 
 client.on('message', msg => {
 
-    if(msg.content.split(' ', 2)[0] == "I'm" || msg.content.split(' ', 2)[0] == "I’m"){
+    if(msg.content.split(' ', 2)[0].toLowerCase() === "i'm" || msg.content.split(' ', 2)[0].toLowerCase() === "i’m" || msg.content.split(' ', 2)[0].toLowerCase() === "im"){
         var name = msg.content.slice(4)
         msg.channel.send(`Hi ${name}, I'm dad.`)
     }
