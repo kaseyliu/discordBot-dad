@@ -12,7 +12,7 @@ client.on('message', msg => {
     var prefix = msg.content.split(' ', 2)[0].toLowerCase()
 
     if(prefix === "i'm" || prefix === "i’m" || prefix === "im"){
-        var name = msg.content.slice(prefix.length + 1)
+        var name = msg.content.slice(prefix.length + 1).replace(/\b\w/g, char => char.toUpperCase())
         msg.channel.send(`Hi ${name}, I'm Dad.`)
     }
 
