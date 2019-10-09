@@ -1,7 +1,7 @@
 const fs = require('fs')
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const info = JSON.parse(fs.readFileSync('./token.json'))
+const info = JSON.parse(fs.readFileSync('./token.JSON'))
 const token = info.token
 
 client.once('ready', () => {
